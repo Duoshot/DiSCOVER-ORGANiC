@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="itemWebservice.php" method="post" enctype="multipart/form-data">
+    ID:<input type="number" name="id"><br>
+    Name:<input type="text" name="name"><br>
+    Description:<textarea name="description" cols="40" rows="5"></textarea><br>
+    Made in:<input type="text" name="made_in"><br>
+    Select image to upload:<input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <input type="submit" value="Submit" name="submit">
+    <input type="hidden" name = "action" value="add">
+</form>
+</body>
+</html>

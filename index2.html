@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <br>
+    <a href ='homepage.php'>CLICK ME TO HOMEPAGE </a>
+    
+<h1>Customer Functions</h1>
+<form action="customer/addCustomer.html">
+    <fieldset>
+        <input type="submit" value="Add new customer">
+    </fieldset>
+</form>
+<form action="customer/updateCustomer.html">
+    <fieldset>
+        <input type="submit" value="Update customer">
+    </fieldset>
+</form>
+<form action="customer/customerWebservice.php" method="post">
+    <fieldset>
+    Delete Customer:<input type="text" name="username">
+        <input type="submit">
+        <input type="hidden" name="action" value="delete">
+    </fieldset>
+</form>
+<form action="customer/customerWebservice.php" method="post">
+    <fieldset>
+        Subscribe to store: Username:<input type="text" name="username">
+        Store name:<input type="text" name="name">
+        Email notifications? <input type="checkbox" name="emailNotifications" value="true">
+        <input type="hidden" name = "action" value="subscribe"><input type="submit">
+    </fieldset>
+</form>
+<form action="customer/customerWebservice.php" method="post">
+    <fieldset>
+        Toggle email notifications: Username:<input type="text" name="username">
+        Store name subscribed to:<input type="text" name="name">
+        <input type="hidden" name = "action" value="toggleNotifications"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="customer/customerWebservice.php" method="post">
+    <fieldset>
+        Unsubscribe from store: Username:<input type="text" name="username">
+        Store name subscribed to:<input type="text" name="name">
+        <input type="hidden" name = "action" value="unsubscribe"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="customer/addReservation.php" method="post">
+    <fieldset>
+        Reserve an item: Username:<input type="text" name="username">
+        Store to reserve from:<input type="text" name="name">
+        Address of location:<input type="text" name="address"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="customer/customerWebservice.php" method="post">
+    <fieldset>
+        Cancel reservation: Username:<input type="text" name="username">
+        Store reserved from:<input type="text" name="name">
+        Address of location:<input type="text" name="address">
+        Item ID:<input type="number" name="id">
+        <input type="hidden" name="action" value="cancelReservation">
+        <input type="submit">
+    </fieldset>
+
+</form>
+<hr>
+
+<h1>Store Functions</h1>
+<form action="store/addStore.html">
+    <fieldset>
+        <input type="submit" value="Add new store">
+    </fieldset>
+
+</form>
+<form action="store/updateStore.html">
+    <fieldset>
+        <input type="submit" value="Update store">
+    </fieldset>
+
+</form>
+<form action="store/addItems.php" method="post">
+    <fieldset>
+        Add Items to Store:<input type="text" name="name"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="store/addItems.php" method="post">
+    <fieldset>
+        Add Items to Store:<input type="text" name="name"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="store/updateItems.php" method="post">
+    <fieldset>
+        Update Items for Store:<input type="text" name="name">
+        At location with address:<input type="text" name="address"><input type="submit">
+    </fieldset>
+
+</form>
+<form action="store/storeWebservice.php" method="post">
+    <fieldset>
+        Delete Store:<input type="text" name="name">
+        <input type="submit">
+        <input type="hidden" name="action" value="delete">
+    </fieldset>
+
+</form>
+
+<hr>
+
+<h1>Location Functions</h1>
+<form action="location/addLocation.php">
+    <fieldset>
+
+        <input type="submit" value="Add new location">
+    </fieldset>
+</form>
+<form action="location/updateLocation.php">
+    <fieldset>
+        <input type="submit" value="Update location">
+    </fieldset>
+
+</form>
+<form action="location/deleteLocation.php" method="post">
+    <fieldset>
+        <input type="submit" value="Delete location">
+    </fieldset>
+
+</form>
+
+<hr>
+
+<h1>Item Functions</h1>
+<form action="item/addItem.html">
+    <fieldset>
+        <input type="submit" value="Add new item">
+    </fieldset>
+
+</form>
+<form action="item/updateItem.html">
+    <fieldset>
+        <input type="submit" value="Update item">
+    </fieldset>
+
+</form>
+<form action="item/addCategory.php">
+    <fieldset>
+        <input type="submit" value="Add Category">
+    </fieldset>
+
+</form>
+<form action="item/removeCategory.php" method="post">
+    <fieldset>
+        Remove a category from item with ID:<input type="number" name="id">
+        <input type="submit" value="submit">
+    </fieldset>
+
+</form>
+<form action="item/itemWebservice.php" method="post">
+    <fieldset>
+        Delete Item with ID:<input type="text" name="id">
+        <input type="submit">
+        <input type="hidden" name="action" value="delete">
+    </fieldset>
+
+</form>
+<hr>
+
+<h1>Utility Functions</h1>
+<form action="utility/viewTable.php" method="post">
+    <fieldset>
+        View Table:<input type="text" name="table">
+        <input type="submit">
+    </fieldset>
+
+</form>
+</body>
+</html>
